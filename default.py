@@ -160,7 +160,7 @@ def listVideo(videoID, title, thumbUrl, tvshowIsEpisode, hideMovies):
     mpaa = ""
     if match:
         mpaa = match[0]
-    match = re.compile('<span class="duration".*?>(.+?)<\/span>', re.DOTALL).findall(videoDetails)
+    match = re.compile('<span class="duration ".*?>(.+?)<\/span>', re.DOTALL).findall(videoDetails)
     duration = ""
     if match:
         duration = match[0].lower()
